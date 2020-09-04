@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/1e7555f7c5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a class='clockbtn' href="#"><i class="fas fa-clock"></i></a></li>
+      <li><a class='stopwatchbtn' href="#"><i class="fas fa-stopwatch"></i></a></li>
+      <li><a class="countdownbtn" href="#"><i class="fas fa-hourglass"></i></a></i></li>
+    </ul>
+  </nav>
+  <div class="clock"><span></span></div>
+  <div class="stopwatch">
+    <div class="counter visible"><span>---</span></div>
+    <div class="buttons visible">
+      <a class='start' href="#"><i class="fas fa-play"></i></a>
+      <a href="#" class="stop ainvisible"><i class="fas fa-stop"></i></a>
+      <a class='reset' href="#"><i class="fas fa-stop-circle"></i></a>
+    </div>
+
+  </div>
+  <div class="countdown" id="app">
+    <div class='visible' id="countdown">
+      <div class='visible' id="countdown-number"></div>
+      <svg>
+        <circle r="100" cx="103" cy="103"></circle>
+      </svg>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

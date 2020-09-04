@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d3dbd6;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  padding: 50px;
+  flex-basis: calc(100vw / 3);
+  list-style: none;
+}
+
+li a {
+  display: block;
+  text-align: center;
+  color: #313738;
+  font-size: 4vh;
+}
+
+a:hover {
+  color: #849396;
+}
+
+div {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15vh;
+  font-family: "Syne", sans-serif;
+  color: #262a2b;
+}
+
+.visible {
+  display: block;
+}
+
+.stopwatch {
+  width: 100%;
+}
+
+.buttons {
+  top: 30%;
+  left: 80%;
+}
+
+.counter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.stopwatch i {
+  color: #262a2b;
+  padding-left: 40px;
+  font-size: 25px;
+}
+
+.stopwatch i:hover {
+  color: #a4a5b3;
+}
+
+.ainvisible {
+  display: none;
+}
+
+#countdown {
+  position: relative;
+  margin: auto;
+  text-align: center;
+}
+
+#countdown-number {
+  color: #262a2b;
+  font-size: 15vh;
+}
+
+svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 206px;
+  height: 206px;
+  transform: translate(-50%, -50%) rotateY(-180deg) rotateZ(-90deg);
+}
+
+svg circle {
+  stroke-dasharray: 647px;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
+  stroke-width: 3px;
+  stroke: #262a2b;
+  fill: none;
+  animation: countdown 10s linear infinite forwards;
+}
+
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 0px;
+  }
+
+  to {
+    stroke-dashoffset: 647px;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  div {
+    font-size: 13vh;
+  }
+
+  #countdown-number {
+    font-size: 13vh;
+  }
+
+  .stopwatch {
+    height: 80%;
+  }
+
+  .buttons {
+    top: 70%;
+    left: 50%;
+  }
+
+  .stopwatch i {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  div {
+    font-size: 11vh;
+  }
+  #countdown-number {
+    font-size: 11vh;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  div {
+    font-size: 20vw;
+  }
+
+  #countdown-number {
+    font-size: 20vw;
+  }
+}
